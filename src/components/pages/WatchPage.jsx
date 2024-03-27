@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 import { closeSideBar } from '../../redux/slices/appSlice';
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
-import { COMMENTS_API, SINGLE_VIDEO, } from '../../utils/Constants';
+import { COMMENTS_API, MOST_LIKED_VIDEOS, SINGLE_VIDEO, } from '../../utils/Constants';
 import Comments from './Comments';
 // import useFetchVideos from '../../utils/useFetchVideos';
 import LiveChat from './LiveChat';
@@ -26,6 +26,7 @@ const WatchPage = () => {
     fetchCommentsList();
     fetchSingleVideo()
     // fetchChannelList()
+    fetchMostLikedVideos()
 
   }, []);
 
@@ -33,9 +34,9 @@ const WatchPage = () => {
     try {
 
       const commentsResponse = await axios.get(`${COMMENTS_API}${searchParams.get('v')}&key=${import.meta.env.VITE_YOUTUBE_API_KEY}`);
-      
+
       setComments(commentsResponse?.data?.items)
-      
+
 
 
     } catch (error) {
@@ -47,6 +48,11 @@ const WatchPage = () => {
     setSingleVideo(response?.data?.items)
 
 
+  }
+
+  const fetchMostLikedVideos = async () => {
+    const response = await axios.get(MOST_LIKED_VIDEOS);
+    console.log(response)
   }
 
 

@@ -58,7 +58,7 @@ const Header = () => {
   return (
     <header className=' py-4 px-5   h-[4.25rem] bg-white w-full fixed z-10  border-black  flex justify-between items-center md:w-full md:grid md:grid-flow-col '>
 
-      <section className='w-12 md:w-[30%] md:flex md:items-center md:col-span-1  h-14  fixed '>
+      <section className='w-12  md:w-[30%] md:flex md:items-center md:col-span-1  h-14  fixed '>
         <span className='hover:bg-gray-200 hover:rounded-full px-3 py-1 rounded-full cursor-pointer hidden md:block'>
           <RxHamburgerMenu className='h-8  text-xl ' onClick={toggleMenuHandler} />
         </span>
@@ -66,7 +66,7 @@ const Header = () => {
         <img className='w-32 h-8 mix-blend-multiply mx-2 hidden md:block' src={YOUTUBE_LOGO} alt="YOUTUBE_LOGO" />
         <img src={MINI_YOUTUBE_LOGO} alt="MINI_YOUTUBE_LOGO"  className='block w-24 h-12   md:hidden'/>
       </section>
-      <section className=' w-64 md:w-full md:col-span-10 flex flex-col items-center justify-center'>
+      <section className=' w-56 mx-16 z-10 md:w-full md:col-span-10 flex flex-col items-center justify-center'>
 
         <div className='w-full flex justify-center items-center '>
           <span className='flex items-center border w-full justify-center sm:justify-between h-8 sm:h-11  border-[#d8d6d6] rounded-l-full  py-2 px-4  sm:w-3/6'>
