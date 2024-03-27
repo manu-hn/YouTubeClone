@@ -65,7 +65,7 @@ export const MOST_LIKED_VIDEOS = `https://youtube.googleapis.com/youtube/v3/vide
 
 export const SINGLE_VIDEO = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=`
 
-export const YOUTUBE_SEARCH_API = `http://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=`;
+export const YOUTUBE_SEARCH_API = `https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&q=`;
 
 // export const YOUTUBE_KEYWORD_VIDEOS = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=surfing&key=${YOUTUBE_API_KEY}`;
 export const YOUTUBE_KEYWORD_VIDEOS = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&q=`;
